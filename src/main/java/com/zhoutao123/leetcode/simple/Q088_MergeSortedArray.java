@@ -10,7 +10,7 @@ import java.util.Arrays;
  * @apiNote 核心思想: 双指针
  * @apiNote https://leetcode-cn.com/problems/merge-sorted-array
  */
-public class Q88_MergeSortedArray {
+public class Q088_MergeSortedArray {
   public static void main(String[] args) {
     int[] nums1 = {1, 2, 3, 0, 0, 0};
 
