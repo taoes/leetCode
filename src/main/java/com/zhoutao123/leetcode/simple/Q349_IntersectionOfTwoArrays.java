@@ -3,13 +3,13 @@ package com.zhoutao123.leetcode.simple;
 import java.util.*;
 
 /**
- * Q249: 两个数组的交集
+ * Q349: 两个数组的交集
  * <li>执行用时： 3 ms , 在所有 Java 提交中击败了 84.46% 的用户
  * <li>内存消耗： 38.6 MB , 在所有 Java 提交中击败了 68.10% 的用户
  *
  * @apiNote https://leetcode-cn.com/problems/intersection-of-two-arrays/
  */
-public class Q249_IntersectionOfTwoArrays {
+public class Q349_IntersectionOfTwoArrays {
 
   public static void main(String[] args) {
     int[] ints = intersection(new int[] {1, 2, 2, 1}, new int[] {2, 2, 3, 3});
