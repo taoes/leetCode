@@ -7,7 +7,7 @@ public class ListNode {
 
   ListNode() {}
 
-  ListNode(int val) {
+  public ListNode(int val) {
     this.val = val;
   }
 
@@ -26,6 +26,16 @@ public class ListNode {
       tmp = newNode;
     }
     return node;
+  }
+
+  public int length() {
+    int length = 0;
+    ListNode node = this;
+    while (node != null) {
+      length++;
+      node = node.next;
+    }
+    return length;
   }
 
   /** 打印链表信息 */
