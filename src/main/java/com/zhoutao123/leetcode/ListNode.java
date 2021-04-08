@@ -18,6 +18,9 @@ public class ListNode {
 
   /** 通过数组构建链表 */
   public static ListNode build(int[] data) {
+    if (data == null || data.length == 0){
+      return null;
+    }
     ListNode node = new ListNode(data[0]);
     ListNode tmp = node;
     for (int i = 1; i < data.length; i++) {
