@@ -14,8 +14,11 @@ import java.util.Map;
 public class Q001_TwoNum {
 
   public static void main(String[] args) {
-    int[] result = new Q001_TwoNum().twoSum(new int[] {3, 3}, 6);
+    int[] nums = {1, 2, 3, 4, 5, 6, 7, 8};
+    int[] result = new Q001_TwoNum().twoSum(nums, 6);
+    int[] result2 = new Q001_TwoNum().twoSum2(nums, 6);
     System.out.println(Arrays.toString(result));
+    System.out.println(Arrays.toString(result2));
   }
 
   public int[] twoSum(int[] nums, int target) {
@@ -28,6 +31,25 @@ public class Q001_TwoNum {
         return new int[] {valueMap.get(nums[i]), i};
       } else {
         valueMap.put(target - nums[i], i);
+      }
+    }
+    return new int[] {};
+  }
+
+  public int[] twoSum2(int[] nums, int target) {
+    if (nums == null || nums.length < 2) {
+      return new int[] {};
+    }
+    Arrays.sort(nums);
+    int p1 = 0, p2 = nums.length - 1;
+    while (p1 < p2) {
+      int sum = nums[p1] + nums[p2];
+      if (sum == target) {
+        return new int[] {p1, p2};
+      } else if (sum > target) {
+        p2--;
+      } else {
+        p1++;
       }
     }
     return new int[] {};
