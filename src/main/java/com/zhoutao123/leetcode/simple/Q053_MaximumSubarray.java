@@ -19,8 +19,8 @@ public class Q053_MaximumSubarray {
   public static int maxSubArray(int[] nums) {
     int max = 0;
     int maxAns = nums[0];
-    for (int i = 0; i < nums.length; i++) {
-      max = Math.max(nums[i], nums[i] + max);
+    for (int num : nums) {
+      max = Math.max(num, num + max);
       maxAns = Math.max(max, maxAns);
     }
     return maxAns;

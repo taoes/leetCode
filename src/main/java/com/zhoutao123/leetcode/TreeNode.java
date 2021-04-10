@@ -1,5 +1,7 @@
 package com.zhoutao123.leetcode;
 
+import java.util.Objects;
+
 /** 树节点Node */
 public class TreeNode {
   public Integer val;
@@ -16,6 +18,24 @@ public class TreeNode {
     this.val = val;
     this.left = left;
     this.right = right;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    TreeNode node = (TreeNode) o;
+    return Objects.equals(val, node.val);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(val);
+  }
+
+  @Override
+  public String toString() {
+    return "TreeNode{" + "val=" + val + '}';
   }
 
   /** 通过数组构建链表 */
